@@ -62,12 +62,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
  * @buffer: The string that lineptr will be given.
  * @b: The size of buffer.
  */
-void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t b)
+void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t e)
 {
 	if (*lineptr == NULL)
 	{
 		if (e > 120)
-			*n = b;
+			*n = e;
 		else
 			*n = 120;
 		*lineptr = buffer;

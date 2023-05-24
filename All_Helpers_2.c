@@ -127,7 +127,7 @@ ssize_t get_new_len(char *line)
 		{
 			if (current == ';')
 			{
-				if (next == ';' && line[i - 1] != ' ' && line[m - 1] != ';')
+				if (next == ';' && line[m - 1] != ' ' && line[m - 1] != ';')
 				{
 					new_len += 2;
 					continue;
@@ -147,7 +147,7 @@ ssize_t get_new_len(char *line)
 		}
 		else if (current == ';')
 		{
-			if (m != 0 && line[i - 1] != ' ')
+			if (m != 0 && line[m - 1] != ' ')
 				new_len++;
 			if (next != ' ' && next != ';')
 				new_len++;
